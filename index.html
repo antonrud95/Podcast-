@@ -1,12 +1,296 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Podcast</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+         <!-- Styles CSS -->
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Podcast</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="navigation">
+                    <a href="#" class="navigation__logo">
+                        <img src="./assets/logo.svg" alt="">
+                    </a>
+                    <div class="navigation__burger">
+                        <img src="./assets/burger.svg" class="first" alt="">
+                        <img src="./assets/burger-close.svg" class="second" alt="">
+                    </div>
+                    <nav class="navigation__nav">
+                        <ul class="nav-list">
+                            <li>
+                                <a href="#" class="nav-list__link">Listen</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-list__link">Watch</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-list__link">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-list__link">About</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-list__link">Where to find us</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-list__link">Support</a>
+                            </li>
+                            <li class="navigation-search">
+                                <input class="search-txt" type="text" name="" placeholder="Search">
+                                <a href="#" class="search-btn">
+                                    <img src="./assets/search.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="navigation-search-lock">
+                                <div class="button-upper">
+                                    <a href="#" class="search-btn">
+                                        <img src="./assets/search-lock.svg" alt="">
+                                    </a>
+                                    <input class="search-txt" type="text">
+                                </div>
+                                <div class="button-lower">
+                                    <a href="#" class="button-white">
+                                        Search
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-carousel">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                          <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-xl-6 offset xl-6">
+                                        <div class="title-container">
+                                            <h5>
+                                                The soviet space program series
+                                            </h5>
+                                            <img src="./assets/dot.svg" alt="">
+                                            <h5>
+                                                14.12.2019
+                                            </h5>
+                                        </div>
+                                        <h2>
+                                            #063 THE SOVIET SPACE PROGRAM.<br>
+                                            1. FROM THE BEGINNING TO THE SATELLITE
+                                        </h2>
+                                        <p>
+                                            This night we begin a space journey following the Soviet space program.
+                                            Missile defense technology, the first satellites and dogs in space.
+                                        </p>
+                                        <a class="button-play" href="#">
+                                            <img src="./assets/play.svg" alt="">
+                                            Listen now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-xl-6 offset xl-6">
+                                        <div class="title-container">
+                                            <h5>
+                                                Human issues
+                                            </h5>
+                                            <img src="./assets/dot.svg" alt="">
+                                            <h5>
+                                                17.09.2019
+                                            </h5>
+                                        </div>
+                                        <h2>
+                                            #033 Don’t panic. How to prepare for an irreversible disaster.
+                                        </h2>
+                                        <p>
+                                            Essentials for the various misfortunes! That night we gathered with the bad major Witek. What should I have at home just in case, but not become a crazy prepper?
+                                        </p>
+                                        <a class="button-play" href="#">
+                                            <img src="./assets/play.svg" alt="">
+                                            Listen now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-xl-6 offset xl-6">
+                                        <div class="title-container">
+                                            <h5>
+                                                History
+                                            </h5>
+                                            <img src="./assets/dot.svg" alt="">
+                                            <h5>
+                                                23.08.2019
+                                            </h5>
+                                        </div>
+                                        <h2>
+                                            #046 Prehistory 2. FROM THE FIRST CITY TO THE FIRST WONDER OF THE WORLD
+                                        </h2>
+                                        <p>
+                                            The story that is not taught in school, Part two. This night we leave the first cities for the first serious state, and the first miracle of the world is on the horizon.
+                                        </p>
+                                        <a class="button-play" href="#">
+                                            <img src="./assets/play.svg" alt="">
+                                            Listen now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-xl-6 offset xl-6">
+                                        <div class="title-container">
+                                            <h5>
+                                                History
+                                            </h5>
+                                            <img src="./assets/dot.svg" alt="">
+                                            <h5>
+                                                16.08.2019
+                                            </h5>
+                                        </div>
+                                        <h2>
+                                            #045 prehistory 1. FROM THE FIRST CITY TO THE FIRST WONDER OF THE WORLD
+                                        </h2>
+                                        <p>
+                                            The story that is not taught in school, Part one. This night we go from the beginning: the inventions we need to create a civilization.
+                                        </p>
+                                        <a class="button-play" href="#">
+                                            <img src="./assets/play.svg" alt="">
+                                            Listen now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="videos">
+                    <h2>
+                        all series
+                    </h2>
+                    <div class="videos-container">
+                        <div class="videos-container__item">
+                            <div class="videos-container__item__inner">
+                                <h6>
+                                    History
+                                </h6>
+                                <p>
+                                    The Evil Major Vitek
+                                    takes us on a journey through time
+                                </p>
+                                <a class="button-play" href="#">
+                                    <img src="./assets/play.svg" alt="">
+                                    9 episodes
+                                </a>
+                            </div>
+                        </div>
+                        <div class="videos-container__item">
+                            <div class="videos-container__item__inner">
+                                <h6>
+                                    biology
+                                </h6>
+                                <p>
+                                    We’re an old hand at biology.
+                                    Dr. Kuba presents.
+                                </p>
+                                <a class="button-play" href="#">
+                                    <img src="./assets/play.svg" alt="">
+                                    5 episodes
+                                </a>
+                            </div>
+                        </div>
+                        <div class="videos-container__item">
+                            <div class="videos-container__item__inner">
+                                <h6>
+                                    human issues
+                                </h6>
+                                <p>
+                                    What does it all mean?
+                                    What to do?
+                                    How to live?
+                                </p>
+                                <a class="button-play" href="#">
+                                    <img src="./assets/play.svg" alt="">
+                                    13 episodes
+                                </a>
+                            </div>
+                        </div>
+                        <div class="videos-container__item">
+                            <div class="videos-container__item__inner">
+                                <h6>
+                                    the soviet space program
+                                </h6>
+                                <p>
+                                    We're going into space
+                                    with the Evil Major Vitek
+                                </p>
+                                <a class="button-play" href="#">
+                                    <img src="./assets/play.svg" alt="">
+                                    3 episodes
+                                </a>
+                            </div>
+                        </div>
+                        <div class="videos-container__item">
+                            <div class="videos-container__item__inner">
+                                <h6>
+                                    travel
+                                </h6>
+                                <p>
+                                    Packing glasses
+                                    and a flamethrower.
+                                </p>
+                                <a class="button-play" href="#">
+                                    <img src="./assets/play.svg" alt="">
+                                    7 episodes
+                                </a>
+                            </div>
+                        </div>
+                        <div class="videos-container__item">
+                            <div class="videos-container__item__inner">
+                                <h6>
+                                    music
+                                </h6>
+                                <p>
+                                    Discussing why Tarja
+                                    is better than Anette Olzon.
+                                </p>
+                                <a class="button-play" href="#">
+                                    <img src="./assets/play.svg" alt="">
+                                    21 episodes
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="videos-hide-button">
+                        <a href="#" class="button-white">
+                            View all series
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-earth">
+                <img src="./assets/earth-bg.png" alt="">
+            </div>
+        </header>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="./js/burger.js"></script>
+    </body>
 </html>
