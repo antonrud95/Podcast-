@@ -72,6 +72,10 @@ p {
     background: #020922;
     border: 2px solid $color-white;
     border-radius: 39px;
+    text-decoration: none;
+    &:hover {
+        color: $color-white;
+    }
 }
 .button-white {
     background: $color-white;
@@ -168,7 +172,9 @@ p {
             li {
                 width: 20px;
                 height: 4px;
-                border-radius: 12px;
+                background-clip: border-box;
+                border: none;
+                border-radius: 42px !important;
             }
             top: 285px;
             justify-content: flex-start;
@@ -192,8 +198,13 @@ p {
             }
             a {
                 padding: 10px 16px;
-                img {
-                    margin-right: 9px;
+                &:hover {
+                    background: $color-white;
+                    color: $color-bg;
+                }
+                .fa-play {
+                    font-size: 14px;
+                    margin-right: 8px;
                 }
             }
         }
@@ -203,7 +214,7 @@ p {
             max-width: 100%;
         }
         position: absolute;
-        top: 35px;
+        top: 0;
         right: 0;
         z-index: 3;
     }
@@ -213,12 +224,13 @@ p {
             margin-bottom: 46px;
         }
         .videos-container {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 30px;
+            margin-bottom: 50px;
             &__item {
-                width: 25%;
-                height: 252px;
-                margin-bottom: 30px;
+                max-width: 100%;
                 &:nth-child(1) {
                     .videos-container__item__inner {
                         background: url(..//assets/seriesDesktop/history.jpg) center no-repeat;
@@ -277,12 +289,13 @@ p {
                         background: transparent;
                         margin-bottom: 32px;
                         margin-top: auto;
-                        img {
-                            margin-right: 8px;
-                        }
                         &:hover {
                             background: $color-white;
                             color: $color-bg;
+                        }
+                        .fa-play {
+                            font-size: 14px;
+                            margin-right: 8px;
                         }
                     }
                 }
@@ -290,7 +303,7 @@ p {
         }
         .videos-hide-button {
             text-align: center;
-            margin-bottom: 40px;
+            margin: 32px 0 40px 0;
             a {
                 padding: 10px 28px;
                 &:hover {
@@ -310,28 +323,16 @@ p {
                 }
             }
         }
-        .videos {
-            .videos-container {
-                &__item {
-                    &:nth-child(2) {
-                        .videos-container__item__inner {
-                            margin: 0 auto;
-                        }
-                    }
-                    &:nth-child(3) {
-                        .videos-container__item__inner {
-                            margin: 0 auto;
-                        }
-                    }
-                    &:nth-child(4) {
-                        .videos-container__item__inner {
-                            margin-left: auto;
-                        }
-                    }
-                    &:nth-child(6) {
-                        .videos-container__item__inner {
-                            margin: 0 auto;
-                        }
+    }
+}
+@media (max-width: 1250px) {
+    .header {
+        .container {
+            .videos {
+                .videos-container {
+                    grid-template-columns: 1fr 1fr 1fr;
+                    &__item {
+                        justify-self: center;
                     }
                 }
             }
@@ -436,29 +437,19 @@ p {
                     }
                 }
             }
+        }
+    }
+}
+@media (max-width: 920px) {
+    .header {
+        .container {
             .videos {
                 .videos-container {
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr 1fr 1fr;
                     &__item {
-                        width: 33.33333%;
-                        &:nth-child(2) {
-                            .videos-container__item__inner {
-                                margin: 0 auto;
-                            }
-                        }
-                        &:nth-child(3) {
-                            .videos-container__item__inner {
-                                margin-left: auto;
-                            }
-                        }
-                        &:nth-child(5) {
-                            .videos-container__item__inner {
-                                margin: 0 auto;
-                            }
-                        }
-                        &:nth-child(6) {
-                            .videos-container__item__inner {
-                                margin-left: auto;
-                            }
+                        &__inner {
+                            justify-self: center;
                         }
                     }
                 }
@@ -481,14 +472,6 @@ p {
             }
             .videos {
                 padding-top: 350px;
-                .videos-container {
-                    &__item {
-                        width: 50%;
-                        &__inner {
-                            margin: 0 auto;
-                        }
-                    }
-                }
             }
         }
     }
@@ -534,15 +517,13 @@ p {
             .videos {
                 padding-top: 200px;
                 .videos-container {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr 1fr 1fr;
                     &__item {
-                        width: 100%;
                         &:nth-child(4),
                         &:nth-child(5),
                         &:nth-child(6) {
                             display: none;
-                        }
-                        &__inner {
-                            margin: 0 auto;
                         }
                     }
                 }
@@ -557,6 +538,11 @@ p {
     .header {
         .container {
             .header-carousel {
+                .carousel-item {
+                    .title-container {
+                        margin-bottom: 10px;
+                    }
+                }
                 .carousel-indicators {
                     top: 360px;
                 }
