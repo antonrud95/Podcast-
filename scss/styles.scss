@@ -574,3 +574,145 @@ p {
 }
 
 // === /HEADER ======================================================================
+
+// === EPISODES =====================================================================
+.episodes {
+    padding-top: 61px;
+    .container {
+        .episodes-title {
+            text-align: center;
+        }
+        .episodes-container {
+            margin-top: 46px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 156px 156px;
+            grid-gap: 30px;
+            .episodes-item {
+                background-color: #082B55;
+                display: grid;
+                grid-template-rows: 1fr;
+                &__description {
+                    margin: 32px 0 0 40px;
+                    h6 {
+                        margin-bottom: 15px;
+                    }
+                }
+                &__button-low {
+                    .button-play {
+                        padding: 10px 25px;
+                        margin: 50px 0 0 24px;
+                        background: transparent;
+                        &:hover {
+                            background: $color-white;
+                            color: $color-bg;
+                        }
+                        .fa-play {
+                            font-size: 14px;
+                            margin-right: 8px;
+                        }
+                    }
+                }
+                &__button {
+                    place-self: center;
+                }
+                .button-time {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    img {
+                        margin-bottom: 15px;
+                    }
+                    h6 {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+        .episodes-button {
+            text-align: center;
+            margin: 41px 0 61px 0;
+            .button-play {
+                padding: 10px 38px;
+                &:hover {
+                    background: $color-white;
+                    color: $color-bg;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1201px) {
+    .episodes {
+        .container {
+            .episodes-container {
+                .episodes-item {
+                    &:nth-child(1) {
+                        grid-template-columns: 410px 1fr;
+                    }
+                    &:nth-child(2) {
+                        grid-template-columns: 431px 1fr;
+                    }
+                    &:nth-child(3) {
+                        grid-template-columns: 420px 1fr;
+                    }
+                    &:nth-child(4) {
+                        grid-template-columns: 408px 1fr;
+                    }
+                    &__button-low {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1200px) {
+    .episodes {
+        .container {
+            .episodes-container {
+                grid-template-columns: 1fr;
+                grid-template-rows: 252px 252px 252px 252px;
+                .episodes-item {
+                    grid-template-rows: 1fr 1fr;
+                    &__description {
+                        margin: 24px 0 0 24px;
+                    }
+                    &__button {
+                        display: none;
+                    }
+                    .button-time {
+                        display: none;
+                    }
+                }
+            }
+            .episodes-button {
+                margin: 32px 0 40px 0;
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .episodes {
+        .container {
+            .episodes-container {
+                grid-template-rows: 252px 252px 252px;
+                .episodes-item {
+                    &:nth-child(4) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 374px) {
+    .episodes {
+        .container {
+            .episodes-container {
+                grid-template-rows: 275px 275px 275px;
+            }
+        }
+    }
+}
+// ===/EPISODES =====================================================================
