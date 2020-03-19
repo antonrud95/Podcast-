@@ -129,37 +129,6 @@ p {
                         color: $color-white !important;
                     }
                 }
-                .navigation-search {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    height: 40px;
-                    width: 40px;
-                    border-radius: 40px;
-                    padding: 10px;
-                    &:hover > .search-txt{
-                        width: 60px;
-                        padding: 0 6px;
-                    }
-                    .search-txt {
-                        border: none;
-                        background: none;
-                        outline: none;
-                        padding: 0;
-                        color: $color-white;
-                        font-size: 16px;
-                        transition: .4s;
-                        line-height: 20px;
-                        width: 0;
-                        font-family: 'HK Grotesk';
-                        font-style: normal;
-                        font-weight: normal;
-                        font-size: 16px;
-                        line-height: 20px;
-                        text-align: center;
-                        color: $color-white;
-                    }
-                }
             }
         }
     }
@@ -236,6 +205,9 @@ p {
                         background: url(..//assets/seriesDesktop/history.jpg) center no-repeat;
                         background-size: cover;
                         border-radius: 2px;
+                        p {
+                            padding-right: 45px;
+                        }
                     }
                 }
                 &:nth-child(2) {
@@ -248,12 +220,21 @@ p {
                     .videos-container__item__inner {
                         background: url(..//assets/seriesDesktop/human.jpg) center no-repeat;
                         background-size: cover;
+                        p {
+                            padding-right: 55px;
+                        }
                     }
                 }
                 &:nth-child(4) {
                     .videos-container__item__inner {
                         background: url(..//assets/seriesDesktop/space.jpg) center no-repeat;
                         background-size: cover;
+                        h6 {
+                            padding-right: 30px;
+                        }
+                        p {
+                            padding-right: 45px;
+                        }
                     }
                 }
                 &:nth-child(5) {
@@ -266,6 +247,9 @@ p {
                     .videos-container__item__inner {
                         background: url(..//assets/seriesDesktop/music.jpg) center no-repeat;
                         background-size: cover;
+                        p {
+                            padding-right: 45px;
+                        }
                     }
                 }
                 &__inner {
@@ -716,3 +700,104 @@ p {
     }
 }
 // ===/EPISODES =====================================================================
+
+// ===MEDIA =========================================================================
+.media {
+    position: relative;
+    .container {
+        .media-title {
+            text-align: center;
+            margin: 61px 0 40px 0;
+        }
+        .media-content {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-gap: 30px;
+            &__item {
+                &__images {
+                    position: relative;
+                    &__play {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+                &__description {
+                    h6 {
+                        margin: 16px 0 16px 0;
+                    }
+                }
+            }
+        }
+        .media-button {
+            text-align: center;
+            margin: 58px 0 61px 0;
+            .button-play {
+                padding: 10px 38px;
+                &:hover {
+                    background: $color-white;
+                    color: $color-bg;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1250px) {
+    .media {
+        .container {
+            .media-content {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                &__item {
+                    &__images {
+                        &__img {
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 850px) {
+    .media {
+        .container {
+            .media-title {
+                margin: 40px 0 32px 0;
+            }
+            .media-content {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+            }
+            .media-button {
+                margin: 32px 0 40px 0;
+            }
+        }
+    }
+}
+@media (max-width: 500px) {
+    .media {
+        .container {
+            .media-content {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                &__item {
+                    &:nth-child(4) {
+                        display: none;
+                    }
+                    &__description {
+                        h6 {
+                            margin: 16px 0 8px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// ===/MEDIA ========================================================================
