@@ -705,6 +705,8 @@ p {
 .media {
     position: relative;
     .container {
+        position: relative;
+        z-index: 4;
         .media-title {
             text-align: center;
             margin: 61px 0 40px 0;
@@ -801,3 +803,167 @@ p {
     }
 }
 // ===/MEDIA ========================================================================
+
+// === ABOUT ========================================================================
+.about {
+    .container {
+        position: relative;
+        z-index: 4;
+        .about-title {
+            margin-top: 61px;
+            text-align: center;
+            h2 {
+                margin: 0 0 46px 0 ;
+            }
+            p {
+                max-width: 945px;
+                margin: 0 auto 45px auto;
+            }
+        }
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-column-gap: 26px;
+            justify-self: center;
+            margin-bottom: 50px;
+            &__item {
+                text-align: center;
+                h6 {
+                    margin: 21px 0 17px 0;
+                }
+                p {
+                    margin-bottom: 17px;
+                }
+                i {
+                    color: $color-white;
+                    margin-right: 13px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        .about-button {
+            text-align: center;
+            margin-bottom: 61px;
+            a {
+                background: transparent;
+                padding: 10px 29px;
+                &:hover {
+                    background: $color-white;
+                    color: $color-bg;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1200px) {
+    .about {
+        .container {
+            .about-title {
+                margin-top: 40px;
+                h2 {
+                    margin-bottom: 24px;
+                }
+            }
+            .about-content {
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-columns: 1fr;
+                grid-row-gap: 60px;
+                &__item {
+                    img {
+                        width: 154px;
+                        height: 153px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .about {
+        .container {
+            .about-content {
+                margin-bottom: 46px;
+                &__item {
+                    &__links {
+                        i {
+                            font-size: 20px;
+                            margin-right: 25px;
+                            &:last-child {
+                                margin-right: 0;
+                    }
+                        }
+                    }
+                }
+            }
+            .about-button {
+                display: none;
+            }
+        }
+    }
+}
+// ===/ABOUT ========================================================================
+
+// === FOOTER =======================================================================
+.footer {
+    position: relative;
+    padding-top: 61px;
+    .container {
+        position: relative;
+        z-index: 4;
+        .footer-title {
+            text-align: center;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 22px;
+            padding-bottom: 113px;
+            .footer-links {
+                margin-right: 17px;
+                i {
+                color: $color-white;
+                font-size: 20px;
+                margin-right: 22px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    .footer-bg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        img {
+            overflow: hidden;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .footer {
+        padding-top: 46px;
+        .container {
+            .footer-container {
+                display: block;
+                margin-top: 36px;
+                padding-bottom: 88px;
+                text-align: center;
+                .footer-links {
+                    margin-bottom: 21px;
+                    margin-right: 0;
+                    i {
+                    font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+// ===/FOOTER =======================================================================
